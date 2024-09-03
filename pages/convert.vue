@@ -67,7 +67,7 @@ async function updateRates() {
 
 function convertFromTo() {
   if (conversionRate.value && !isNaN(parseFloat(fromAmount.value))) {
-    toAmount.value = (parseFloat(fromAmount.value) * conversionRate.value).toFixed(4);
+    toAmount.value = (parseFloat(fromAmount.value) * conversionRate.value).toFixed(2);
   } else {
     toAmount.value = "";
   }
@@ -75,14 +75,14 @@ function convertFromTo() {
 
 function convertToFrom() {
   if (conversionRate.value && !isNaN(parseFloat(toAmount.value))) {
-    fromAmount.value = (parseFloat(toAmount.value) / conversionRate.value).toFixed(4);
+    fromAmount.value = (parseFloat(toAmount.value) / conversionRate.value).toFixed(2);
   } else {
     fromAmount.value = "";
   }
 }
 
 function formatInput(value) {
-  return parseFloat(value.replace(/[^0-9.]/g, "")).toFixed(4);
+  return parseFloat(value.replace(/[^0-9.]/g, "")).toFixed(2);
 }
 
 watch(fromAmount, (newValue) => {

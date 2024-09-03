@@ -5,7 +5,7 @@
         <h2>Курсы валют относительно {{ activeCurrency.title }}</h2>
         <ul v-if="rates" class="home-page__list">
           <li v-for="currency in filteredCurrencies" :key="currency.value">
-            1 {{ currency.value }} = {{ (1 / rates[currency.value]).toFixed(4) }} {{ activeCurrency.value }}
+            1 {{ currency.value }} = {{ (1 / rates[currency.value]).toFixed(2) }} {{ activeCurrency.value }}
           </li>
         </ul>
       </div>
