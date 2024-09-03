@@ -1,0 +1,162 @@
+* {
+  margin 0
+  padding 0
+  box-sizing border-box
+  min-height 0
+  min-width 0
+  font-family var(--font-regular)
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-clip: padding-box;
+    -webkit-border-radius: 7px;
+    background-color: var(--main);
+    cursor pointer
+
+    &:hover {
+      background-color var(--main)
+    }
+  }
+}
+
+html
+body {
+  scroll-behavior smooth
+  background var(--bg-color)
+  color var(--body-color)
+  font-size var(--font-size-desktop)
+  line-height 22px
+  scrollbar-width auto
+  scrollbar-gutter stable
+}
+
+html {
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-clip: padding-box;
+    -webkit-border-radius: 7px;
+    background-color: var(--main);
+    cursor pointer
+
+    &:hover {
+      background-color var(--main)
+    }
+  }
+}
+
+
+body {
+  overflow-y scroll
+  min-width 320px
+  +above(1025px) {
+    scrollbar-width auto
+    scrollbar-color var(--dark) var(--dark-light)
+  }
+
+  &.no-scroll {
+    +above(1026px) {
+      //padding-right var(--scrollbar-width)
+    }
+  }
+}
+
+a {
+  text-decoration none
+  position relative
+  transition var(--transition)
+  cursor pointer
+  color inherit
+
+  &:not(.no-hover) {
+    &:hover,
+    &.active,
+    &.router-link.router-link-active {
+      color var(--main)
+
+      .icon svg {
+        path[fill], rect[fill] {
+          fill var(--main)
+        }
+
+        path[stroke], rect[stroke] {
+          stroke var(--main)
+        }
+
+        path[stroke],
+        circle[stroke] {
+          stroke var(--main)
+        }
+      }
+    }
+
+    .icon svg path, rect, circle {
+      transition var(--transition)
+    }
+  }
+
+  &:focus
+  &:active {
+    text-decoration none
+  }
+}
+
+ul
+ol {
+  margin 0
+  padding 0
+  list-style none
+}
+
+figure {
+  margin 0
+  display inline-flex
+  align-items center
+  justify-content center
+  flex-shrink 0
+}
+
+textarea {
+  resize vertical
+}
+
+.icon {
+  min-width 10px
+  min-height 10px
+
+  svg {
+    width 100%
+    height 100%
+  }
+}
+
+#app {
+  display flex
+  flex-direction column
+  min-height 100vh
+  min-width 320px
+  +below(1024px) {
+    padding-bottom var(--navigation-bar-height)
+  }
+}
+
+.container {
+  position relative
+  box-sizing content-box
+  max-width var(--main-width)
+  width 100%
+  margin 0 auto
+
+  &-padding {
+    position relative
+    box-sizing border-box
+    max-width var(--main-width)
+    width 100%
+    margin 0 auto
+    padding 0 var(--block-padding)
+  }
+}

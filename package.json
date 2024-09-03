@@ -1,0 +1,39 @@
+{
+  "name": "currency-converter",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
+  },
+  "engines": {
+    "node": "20.x"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "@rushstack/eslint-patch": "^1.2.0",
+    "@types/node": "^20.12.12",
+    "@vue/eslint-config-prettier": "^7.0.0",
+    "eslint": "^8.43.0",
+    "eslint-plugin-cypress": "^2.12.1",
+    "eslint-plugin-vue": "^9.8.0",
+    "nuxt": "3.5.2",
+    "prettier": "^2.8.8",
+    "rupture": "^0.7.1",
+    "stylus": "^0.63.0",
+    "stylus-loader": "^8.1.0"
+  },
+  "dependencies": {
+    "@pinia/nuxt": "^0.5.1",
+    "click-outside-vue3": "^4.0.1",
+    "maska": "^2.1.10",
+    "pinia": "^2.1.7",
+    "vue": "^3.3.4",
+    "axios": "^1.7.7",
+    "vue-inline-svg": "^3.1.2",
+    "vue3-perfect-scrollbar": "^2.0.0"
+  }
+}
